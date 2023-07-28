@@ -6,15 +6,17 @@ import ChatMensaje from "./ChatMensaje";
 
 const socket = io("http://localhost:8080");
 
-function Chat() {
+function Chat({usuario="No especificado"}) {
   const [isConnected, setIsConnected] = useState(false);
   const [nuevoMensaje, setNuevoMensaje] = useState("");
   const [mensajes, setMensajes] = useState([]);
 
   const enviarMensaje = () => {
     socket.emit("chat_message", {
-      usuario: socket.id,
+      id:socket.id,
+      usuario: usuario,
       mensaje: nuevoMensaje,
+      tipo: "archivo"
     });
   };
 
@@ -25,7 +27,7 @@ function Chat() {
       console.log(data);
       setMensajes((mensajes) => [...mensajes, data]);
     });
-
+    
     return () => {
       socket.off("connect");
       socket.off("chat_message");
@@ -46,13 +48,15 @@ function Chat() {
           sx={{
             backgroundColor: "LightGray",
             minHeight: "60vh",
+            maxHeight: "60vh",
+            overflowY: "scroll", 
             width: "60vw",
             borderRadius: "20px 20px 0px 0px",
           }}
         >
           <List>
             {mensajes.map((e, i) => (
-              <ListItem sx={{ marginBottom: "10px" }}>
+              <ListItem sx={{ marginBottom: "10px", display:"flex", justifyContent: usuario !== e.usuario  ? "flex-start" : "flex-end" }}>
                 <ChatMensaje
                   key={i * 203}
                   mensaje={e.mensaje}

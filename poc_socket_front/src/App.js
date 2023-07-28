@@ -8,7 +8,7 @@ const App = () => {
 
   const router = createBrowserRouter([
     { path: "/", element: <Login setUsuario={setUsuario} usuario={usuario} /> },
-    { path: "/chat", element: <Chat /> },
+    { path: "/chat", element: <Chat usuario={usuario}/> },
   ]);
 
   return (
