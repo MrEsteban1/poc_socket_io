@@ -3,7 +3,7 @@ import "./App.css";
 import socket from "../services/socket";
 import { Box, Button, List, ListItem, TextField } from "@mui/material";
 import ChatMensaje from "./ChatMensaje";
-import { usuario as mensaje } from "../interfaces/usuario";
+import { mensaje } from "../interfaces/mensajes";
 import { useNavigate } from "react-router-dom";
 
 interface Props {
