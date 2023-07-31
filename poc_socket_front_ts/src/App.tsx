@@ -1,7 +1,7 @@
-import {useState} from 'react';
+import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Chat from "./components/Chat";
-import Login from './components/Login';
+import Login from "./components/Login";
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -10,14 +10,12 @@ function App() {
 
   const router = createBrowserRouter([
     { path: "/", element: <Login setUsuario={setUsuario} usuario={usuario} /> },
-    // { path: "/chat", element: <Chat usuario={usuario}/> },
+    { path: "/chat", element: <Chat usuario={usuario} /> },
   ]);
 
   return (
     <div className="App">
-      <header className="App-header">
-        hola
-      </header>
+      <header></header>
       <RouterProvider router={router} />
     </div>
   );

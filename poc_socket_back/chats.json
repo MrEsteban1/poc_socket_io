@@ -1,0 +1,59 @@
+{
+  "respuesta": [
+    {
+      "id": "3f779c40-7507-4005-8b80-b8fd082a1f74",
+      "nombre": "Respuesta 5",
+      "descripcion": "respuesta 5",
+      "texto": "Rpesuesta 5 del chat de moneda",
+      "operacion": null,
+      "orden": 3,
+      "is_active": true,
+      "created_at": "2023-06-02T18:56:55.646Z",
+      "updated_at": "2023-06-13T15:03:37.000Z"
+    },
+    {
+      "id": "40312388-6f79-464a-a9d7-49b335569e61",
+      "nombre": "Chatbot Dialogo 1",
+      "descripcion": "Chatbot Dialogo 1",
+      "texto": "HOLA mi gente lindaa!",
+      "operacion": null,
+      "orden": 2,
+      "is_active": true,
+      "created_at": "2023-05-15T17:41:15.691Z",
+      "updated_at": "2023-06-01T16:53:58.000Z"
+    },
+    {
+      "id": "862253ce-7119-49ac-bda1-c12252c5a5e7",
+      "nombre": "Respuesta 4",
+      "descripcion": "nada",
+      "texto": "prueba de la prueba",
+      "operacion": null,
+      "orden": 5,
+      "is_active": true,
+      "created_at": "2023-06-02T15:23:02.621Z",
+      "updated_at": "2023-06-13T15:04:41.000Z"
+    },
+    {
+      "id": "949b384a-21e0-4aa6-a59f-530a76c905f5",
+      "nombre": "Chatbot Dialogo 2",
+      "descripcion": "Chatbot Dialogo 2",
+      "texto": "holandia",
+      "operacion": null,
+      "orden": 4,
+      "is_active": true,
+      "created_at": "2023-05-15T17:41:15.700Z",
+      "updated_at": "2023-06-13T15:04:41.000Z"
+    },
+    {
+      "id": "c9ec0257-f3cc-4afc-ba78-0aab635fb779",
+      "nombre": "Bienvenido",
+      "descripcion": "Bienvenido",
+      "texto": null,
+      "operacion": null,
+      "orden": 1,
+      "is_active": true,
+      "created_at": "2023-05-15T17:41:15.681Z",
+      "updated_at": "2023-05-15T17:41:15.681Z"
+    }
+  ]
+}
