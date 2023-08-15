@@ -5,6 +5,7 @@ function fetchLocalJSONData(ubicacion = "/chats.json") {
   try {
     // Step 1: Read the JSON file
     const jsonString = fs.readFileSync(ubicacion, "utf8");
+    const textString = fs.readFileSync()
 
     // Step 2: Parse the JSON data
     const data = JSON.parse(jsonString);

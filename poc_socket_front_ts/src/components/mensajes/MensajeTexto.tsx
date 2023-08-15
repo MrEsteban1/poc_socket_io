@@ -1,5 +1,10 @@
+import { Box } from "@mui/material";
 import React from "react";
 
-export const Mensaje = () => {
-  return <div>Mensaje</div>;
+interface Props {
+  mensaje: string
+}
+
+export const MensajeText = ({mensaje}:Props) => {
+  return <Box sx={{  maxWidth: "50vh", margin:"10px", textAlign:"left", color:"DarkSlateGray"}}>{mensaje}</Box>;
 };
