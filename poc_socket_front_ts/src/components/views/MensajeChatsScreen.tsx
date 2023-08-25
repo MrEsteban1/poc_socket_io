@@ -9,7 +9,6 @@ const MensajeChatsScreen = () => {
     <Box sx={{
         display: "flex",
         flexDirection: "column",
-        // width: "100%",
       }}>
         <MensajesChat/>
         <MensajeInput setMensaje={setNuevoMensaje}/>
