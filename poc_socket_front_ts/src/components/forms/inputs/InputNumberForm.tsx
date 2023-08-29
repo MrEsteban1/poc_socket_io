@@ -1,9 +1,41 @@
-import React from 'react'
+import { Alert, Box, Button, Input, TextField } from "@mui/material";
+import React, { useState } from "react";
 
-const InputNumberForm = () => {
+const InputNumberForm = ({}) => {
+  const [valor, setValor] = useState<number>();
+  const [error, setError] = useState<boolean>(false);
+
+  const handleChange = (valor: string) => {
+    console.log(parseFloat(valor));
+    const parseo = parseFloat(valor);
+    !isNaN(parseo) ? setValor(parseo) : setError(true);
+    !isNaN(parseo) && setError(false);
+  };
+
   return (
-    <div>InputNumberForm</div>
-  )
-}
+    <Box
+      sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
+      <TextField
+        onChange={(e) => handleChange(e.target.value)}
+        sx={{ width: "50%", margin: "10px", backgroundColor: "white" }}
+        label={valor === 0 ? "Esciba un número" : ""}
+      />
+      <Button
+        sx={{ width: "50%" }}
+        variant="contained"
+        disabled={error || typeof valor === "undefined"}
+      >
+        Siguiente
+      </Button>
 
-export default InputNumberForm
+      {error && (
+        <Alert sx={{ marginTop: "16px" }} severity="warning">
+          Debe ingresar un número.
+        </Alert>
+      )}
+    </Box>
+  );
+};
+
+export default InputNumberForm;

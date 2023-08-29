@@ -3,11 +3,11 @@ export enum tipoMensaje {
   "texto",
 }
 
-export enum FormType{
-  "texto",
-  "numbero",
-  "opciones",
-  "imagen",
-  "file",
-  "fecha"
+export enum FormType {
+  texto = "numero",
+  numero = "numero",
+  opciones = "opciones",
+  imagen = "imagen",
+  file = "file",
+  fecha = "fecha",
 }
