@@ -6,7 +6,7 @@ import InputTextForm from "./inputs/InputTextForm";
 
 interface Props {
   type: string;
-  changeStep: (step: number) => void;
+  // changeStep: (step: number) => void;
 }
 
 const FormInput = ({ type }: Props) => {

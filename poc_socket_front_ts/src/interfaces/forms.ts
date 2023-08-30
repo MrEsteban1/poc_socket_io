@@ -5,7 +5,7 @@ export interface formsStep {
   valueType: FormType;
   variableName: string;
   background?: string;
-  flow?: string;
+  idDestino?: string;
   info: formInfo;
 }
 
@@ -29,4 +29,8 @@ export enum FormType {
   imagen = "imagen",
   file = "file",
   fecha = "fecha",
+}
+
+export interface Variable {
+  [key:string]:string | number | boolean
 }

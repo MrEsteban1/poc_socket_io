@@ -9,8 +9,27 @@ const formBots: FormBot[] = [
         id: "1231",
         valueType: FormType.texto,
         variableName: "nombre",
+        idDestino:"1232",
         info: {
           title: "Hola Bienvenido al ASIBOT! Ingrese su nombre",
+        },
+      },
+      {
+        id: "1232",
+        valueType: FormType.numero,
+        variableName: "edad",
+        idDestino:"1233",
+        info: {
+          title: "Ingrese su edad",
+        },
+      },
+      {
+        id: "1233",
+        valueType: FormType.numero,
+        variableName: "edad",
+        idDestino:"1231",
+        info: {
+          title: "Ingrese su DNI",
         },
       },
     ],
@@ -25,6 +44,7 @@ const formBots: FormBot[] = [
         id: "1231",
         valueType: FormType.fecha,
         variableName: "edad",
+        idDestino: "1232",
         info: {
           title: "Hola Bienvenido al ASIBOT! Ingrese su Edad",
         },

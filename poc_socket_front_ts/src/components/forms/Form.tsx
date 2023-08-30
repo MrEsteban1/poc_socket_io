@@ -7,9 +7,8 @@ import FormInput from "./FormInput";
 interface Props {}
 const Form = ({}: Props) => {
   const FORM = useContext(FormsContext);
-  const [step, setStep] = useState(0);
 
-  useEffect(() => {}, [FORM?.formActual]);
+  useEffect(() => {}, [FORM?.formActual,FORM?.step]);
   return (
     <Box
       sx={{
@@ -23,16 +22,16 @@ const Form = ({}: Props) => {
     >
       <Box>
         <FormStep title={FORM?.formActual.title || " "}>
-          {FORM?.formActual.flujo[step].info ? (
-            <FormInfo info={FORM?.formActual.flujo[step].info} />
+          {FORM?.formActual.flujo[FORM.step].info ? (
+            <FormInfo info={FORM?.formActual.flujo[FORM.step].info} />
           ) : (
             <></>
           )}
-          <p>{FORM?.formActual.flujo[step].valueType}</p>
-          {FORM?.formActual.flujo[step] ? (
+          <p>{FORM?.formActual.flujo[FORM.step].valueType}</p>
+          {FORM?.formActual.flujo[FORM.step] ? (
             <FormInput
-              changeStep={setStep}
-              type={FORM?.formActual.flujo[step].valueType}
+              // changeStep={}
+              type={FORM?.formActual.flujo[FORM.step].valueType}
             />
           ) : (
             <></>
