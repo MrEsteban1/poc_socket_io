@@ -1,5 +1,7 @@
 // import { FormType } from "../enum/Genelares"
 
+import { VariableTipo } from "../context/FormsContext";
+
 export interface formsStep {
   id: string;
   valueType: FormType;
@@ -32,5 +34,5 @@ export enum FormType {
 }
 
 export interface Variable {
-  [key:string]:string | number | boolean
+  [key:string]:VariableTipo
 }

@@ -8,6 +8,7 @@ interface Props {
 }
 
 const InputTextForm = () => {
+  //Valor que se va autilizar para el input de texto
   const [valor, setValor] = useState<string>();
   const [error, setError] = useState<boolean>(false);
   const FORM = useContext(FormsContext)

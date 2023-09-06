@@ -9,6 +9,8 @@ type FormContextProvProps = {
     children: ReactNode
 }
 
+export type VariableTipo = string | number| boolean | Date
+
 export const FormsProvider = ({children}:FormContextProvProps)=> {
     const [formBot,setFormBot] = useState<FormBot[]>(formBots)
     const [formActual, setFormActual] = useState<FormBot>(formBot[0])
@@ -21,7 +23,7 @@ export const FormsProvider = ({children}:FormContextProvProps)=> {
         form && setFormActual(form)
     }
 
-    const saveValue = (nombreVariable:string, valor: string | number| boolean) => {
+    const saveValue = (nombreVariable:string, valor: VariableTipo) => {
         let newValues = values
         newValues[nombreVariable] = valor
         setValues(newValues)
