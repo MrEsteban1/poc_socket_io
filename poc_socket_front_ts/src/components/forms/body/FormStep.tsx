@@ -16,7 +16,14 @@ const FormStep = ({ children, title }: Props) => {
 
   return (
     <Box>
-      <Typography variant="h6">{title}</Typography>
+      <Typography 
+        variant="h5"
+        sx={{
+          fontFamily: 'Poppins',
+          fontWeight: '700',
+          marginTop: '15px',  
+        }}
+      >{title}</Typography>
       {children}
     </Box>
   );

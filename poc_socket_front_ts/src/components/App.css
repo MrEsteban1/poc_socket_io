@@ -10,6 +10,8 @@ body {
   background: linear-gradient(155deg, #1dc48f, #113f6c);
 }
 
+/* LISTADO DE FORMS */
+
 .formSelection {
   margin-right: 20px;
   width: 20vh;
@@ -35,4 +37,26 @@ body {
 
 .listScroll::-webkit-scrollbar {
   display: none;
+}
+
+/* BODY DEL FORM */
+
+.formBody{
+  height: 50vh;
+  width: 70vh;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 24px;
+  color: whitesmoke;
+  background-color: #414a62;
+  box-shadow: 0 2px 15px black;
+}
+
+.formInput {
+  font-family: 'Poppins', sans-serif;
+  background-color: #414a62;
+}
+
+.MuiFormHelperText-root {
+  color: white !important;
 }
