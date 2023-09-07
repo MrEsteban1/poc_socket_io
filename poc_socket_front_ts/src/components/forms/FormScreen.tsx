@@ -1,10 +1,7 @@
-import React, { useContext } from 'react'
-import Form from './Form'
-import FormInfo from './FormInfo'
+import Form from './body/Form'
 import { Box } from '@mui/material'
-import FormSelection from './FormSelection'
-import { FormsContext, FormsProvider } from '../../context/FormsContext'
-import { FormBot } from '../../interfaces/forms'
+import FormSelection from './list/FormSelection'
+import { FormsProvider } from '../../context/FormsContext'
 
 const FormScreen = () => {
   return (

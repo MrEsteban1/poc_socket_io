@@ -1,5 +1,4 @@
-import React from 'react'
-import { formInfo } from '../../interfaces/forms'
+import { formInfo } from '../../../interfaces/forms'
 
 const FormInfo = ({info}: {info: formInfo}) => {
     

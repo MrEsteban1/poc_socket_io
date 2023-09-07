@@ -1,11 +1,11 @@
-import React, { ReactElement } from "react";
-import { formsStep } from "../../interfaces/forms";
+import { ReactElement } from "react";
 import { Box, Typography } from "@mui/material";
-import FormInfo from "./FormInfo";
+
 interface Props {
   children: ReactElement | ReactElement[] | undefined;
   title: string;
 }
+
 const FormStep = ({ children, title }: Props) => {
   {
     /* TODO: Hacer los componentes para mostrar la info.   */

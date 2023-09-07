@@ -1,8 +1,7 @@
 import { useEffect } from "react";
-import { FormType } from "../../enum/Genelares";
-import InputDateForm from "./inputs/InputDateForm";
-import InputNumberForm from "./inputs/InputNumberForm";
-import InputTextForm from "./inputs/InputTextForm";
+import InputDateForm from ".././inputs/InputDateForm";
+import InputNumberForm from ".././inputs/InputNumberForm";
+import InputTextForm from ".././inputs/InputTextForm";
 
 interface Props {
   type: string;

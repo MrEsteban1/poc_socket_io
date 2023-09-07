@@ -1,10 +1,12 @@
-import { Box, Typography } from "@mui/material";
-import React, { ReactElement, useContext, useEffect, useState } from "react";
-import FormStep from "./FormStep";
-import { FormsContext } from "../../context/FormsContext";
+import { Box } from "@mui/material";
+import { useContext, useEffect } from "react";
+import { FormsContext } from "../../../context/FormsContext";
 import FormInfo from "./FormInfo";
 import FormInput from "./FormInput";
+import FormStep from "./FormStep";
+
 interface Props {}
+
 const Form = ({}: Props) => {
   const FORM = useContext(FormsContext);
 
