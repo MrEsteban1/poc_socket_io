@@ -1,6 +1,7 @@
 // import { FormType } from "../enum/Genelares"
 
-import { VariableTipo } from "../context/FormsContext";
+import { VariableTipo } from "../components/types/Variables";
+
 
 export interface formsStep {
   id: string;
@@ -24,6 +25,29 @@ export interface FormBot {
   id: string;
 }
 
+export interface FormBotSimple {
+  flujo: formsStep[];
+  nombre: string;
+  descripcion: string
+  id: string;
+}
+
+export interface FormBotSimpleStep {
+  id: string;
+  background?: string;
+  nombre: string
+  idDestino: string;
+  info: formInfoSimple;
+}
+
+export interface formInfoSimple {
+  title: string;
+  mensaje?: string;
+  imagen?: string;
+  url?: string;
+  notificacion: string[]
+}
+
 export enum FormType {
   texto = "numero",
   numero = "numero",
@@ -36,3 +60,4 @@ export enum FormType {
 export interface Variable {
   [key:string]:VariableTipo
 }
+
